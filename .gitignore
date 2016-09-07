@@ -1,0 +1,6 @@
+.DS*
+
+public/*
+!public/readme.md
+old-site/*
+

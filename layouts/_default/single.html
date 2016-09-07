@@ -1,0 +1,55 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+
+<div class="page-btns-wrapper">
+    <p class="page-btn-return"><a href="{{.Site.BaseURL}}">بازگشت</a></p>
+</div>
+
+{{ "<!----------------------------------------------------------------------- -->" | safeHTML }}
+
+<article id="post" role="article">
+<header class="entry-header">
+ <h1 class="entry-title">
+  <a rel="bookmark" href="{{.Permalink}}">{{.Title}}</a>
+ </h1>
+{{ if ne .Params.singlepage "true" }}
+ <div class="entry-meta">
+  <time class="entry-date published" datetime="{{ .Date.Format "January 2, 2006" }}">{{ .Params.jdate }}</time>
+ </div>
+{{ end }}
+</header><!-- .entry-header -->
+
+<div class="entry-toc">
+{{ if .Params.toc }}
+{{ .Params.toc | safeHTML}}
+{{ end }}
+</div>
+
+<div class="entry-content">
+{{ .Content }}
+</div><!-- .entry-content -->
+
+<footer class="entry-footer">
+ {{ if ne .Params.singlepage "true" }}
+ <div class="cat-links">
+  <p><strong>دسته‌بندی:</strong>
+  {{ range .Params.topic }}
+   <a href="{{ $baseurl }}topic/{{ . | urlize }}">{{ . }}</a>.
+  {{ end }}
+  </p>
+ </div>
+{{end}}
+</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+{{ "<!----------------------------------------------------------------------- -->" | safeHTML }}
+
+{{ if ne .Params.singlepage "true" }}
+<div class="comments">
+<div>
+<h2>نظرات</h2>
+{{ partial "disqus.html" . }}
+</div>
+</div>
+{{ end }}
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+<div class="entry-header">
+    <h1 class="entry-title"><a rel="bookmark" href="{{.Site.BaseURL}}">امیررضا قادری</a></h1>
+    <p class="entry-desc">دسته بندی بر اساس موضوعات</p>
+</div>
+
+
+<ul class="blog-index">
+  {{ range $name, $taxonomy := .Site.Taxonomies.topic }}
+  <li class="blog-index-entry">
+    <a class="blog-index-title" href="{{ $name | urlize }}">{{ $name }}</a>
+  </li>
+  {{ end }}
+</ul>
+
+{{ partial "footer.html" . }}

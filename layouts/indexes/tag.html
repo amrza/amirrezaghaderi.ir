@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+
+<div class="entry-header">
+    <h1 class="entry-title"><a rel="bookmark" href="{{.Site.BaseURL}}">Amirreza's blog</a></h1>
+    <p class="entry-desc">دسته بندی: {{ .Title }}</p>
+</div>
+
+
+<ul class="blog-index">
+  {{ range .Data.Pages }}
+    {{ .Render "li" }}
+  {{ end }}
+</ul>
+
+{{ partial "footer.html" . }}

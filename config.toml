@@ -1,0 +1,8 @@
+baseurl = "http://amirrezaghaderi.ir/blog/"
+languageCode = "fa-IR"
+title = "امیررضا قادری"
+Paginate = 10
+disqusShortname = "amirrezaghaderi-ir"
+
+[indexes]
+tag = "topic"

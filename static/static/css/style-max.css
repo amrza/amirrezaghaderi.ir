@@ -1,0 +1,698 @@
+/*
+Theme Name: amirrezaghaderi.com
+Theme URI: http://amirrezaghaderi.com/blog/
+Author: Amirreza Ghaderi
+Author URI: http://amirrezaghaderi.com
+Description: A Responsive, Minimal, and Content-Oriented theme for my personal blog.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*
+TABLE OF CONTENTS:
+----------------------
+1.0 Load fonts
+2.0 Reset
+3.0 Basic Elements
+4.0 Basic classes
+5.0 Menu
+6.0 Header section
+7.0 Index entries
+8.0 Posts
+9.0 Footer
+10.0 Pagination
+11.0 Archive page
+12.0 Media queries
+----------------------------------------------------------------*/
+
+/* 1.0 Load fonts
+--------------------------------------------------------------*/
+@font-face {
+    font-family: 'Sahel';
+    src: url('../fonts/Sahel.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+#Sahel * { font-family: 'Sahel'; }
+
+@font-face {
+    font-family: 'Sahel-Bold';
+    src: url('../fonts/Sahel-Bold.woff');
+    font-weight: bold;
+    font-style: normal;
+}
+#Sahel-Bold * { font-family: 'Sahel-Bold'; }
+
+
+/* 2.0 Reset (normalize.css v3.0.1 | MIT License | git.io/normalize)
+--------------------------------------------------------------*/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],/* 1 */
+input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+
+/* 3.0 Basic Elements
+--------------------------------------------------------------*/
+/*
+font size base: 1.25em - ratio 8:9 major second 1.125;
+http://www.modularscale.com/?1.25&em&1.125&web&text
+*/
+html {
+    margin:0;
+    padding:0;
+    height:100%;
+    font-size: 1em;
+}
+
+body {
+    color: #404040;
+    font-family: 'Sahel', serif;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* Corrects font size not being inherited in all browsers */
+    margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+    vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    border: 1px solid;
+    border-color: #ccc #ccc #bbb;
+    background: #e6e6e6;
+    color: rgba(0, 0, 0, .8);
+    cursor: pointer;
+    -webkit-appearance: button;
+    padding: .6em 1em .4em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+    color: #666;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    color: #111;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+    padding: 3px;
+}
+
+textarea {
+    overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+    padding-left: 3px;
+    vertical-align: top; /* Improves readability and alignment in all browsers */
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sahel-Bold';
+    font-weight: bold;
+}
+h1 { font-size: 2.2em;}
+h2 { font-size: 1.6em;}
+h3 { font-size: 1.4em;}
+h4 { font-size: 1.2em;}
+
+p {
+    font-size: 1.1em;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1.8;
+    //overflow: auto;
+}
+
+b,
+strong {
+    font-family: 'Sahel-Bold';
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #F03838;
+	//font-size: 1.3em;
+}
+
+pre, code {
+    margin: 20px 0;
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-size: 0.988em;
+    line-height: 1.5;
+    //background: #eee;
+}
+pre {
+    border: solid 1px #ccc;
+    padding: 20px 10px;
+}
+ul, ol {
+    list-style-type: square;
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
+blockquote,
+q {
+    quotes: "" "";
+}
+
+article {
+    padding: 10px;
+    //text-align: right;
+    //direction: rtl;
+}
+
+/* 4.0 Basic classes.
+--------------------------------------------------------------*/
+
+/*
+.screen-reader-text {
+    display: none;
+}
+
+.site {
+}
+
+.page-header {
+    //padding-bottom: 10px;
+}
+
+.none-p {
+    font-size: 0.8em;
+}
+
+.search-field {
+    width: 200px;
+    margin-bottom: 10px;
+}
+*/
+
+
+/* 5.0 Menu
+--------------------------------------------------------------*/
+.page-header {
+    //margin-bottom: 100px;
+    height: 100px;
+}
+.page-nav {
+    padding: 0;
+    position: fixed;
+    top:0;
+    right: 0;    //change
+    width: 100%;
+    //direction: rtl;
+    //text-align: right;
+}
+
+.menu-btn {
+    //display: inline-block;
+    font-size: 1em;
+    padding: 0.7em;
+    color: #fefefe;
+    background: #F03838;
+    width: 6em;
+    display: block;
+}
+.menu-btn:hover {
+    background: #404040;
+}
+
+.menu {
+    position: fixed;
+    top:0;
+    right: -240px;
+    background: #ddd;
+    border-left: 1px solid #ccc;
+    width: 240px;
+    height: 100%;
+    direction: rtl;
+    font-size: 0.9em;
+    text-align: right;
+    padding: 0;
+}
+.menu ul {
+    padding: 0;
+}
+.menu li {
+    list-style-type: none;
+    padding: 1em 1em 1em 1em;
+}
+
+.move-nav-to-left { left: 240px; }
+.move-menu-to-left { left: 0px; }
+.move-nav-to-right { right: 240px; }
+.move-menu-to-right { right: 0px; }
+
+.menu, .page-nav, .side-menu-activate {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+
+/* 6.0 Header section.
+--------------------------------------------------------------*/
+.site-branding,
+.page-btns-wrapper {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    //border-bottom: solid 3px #404040;
+    //padding-top: 1em;
+    padding: 20px 10px;
+}
+.page-btn-return {
+    //padding-bottom: 20px;
+}
+.page-btn-return a {
+    font-size: 0.8em;
+    color: #fefefe;
+    background: #F03838;
+    padding: 0.5em 1em;
+}
+/*
+.site-title,
+.page-title-big{
+    font-size: 3em;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.site-title a,
+.page-title-big a {
+    color: #404040;
+}
+.site-title a:hover,
+.page-title-big a:hover {
+    color: #F03838;
+}
+.site-description, .page-title-description {
+    padding-bottom: 20px;
+    margin: 0;
+    color: #999999;
+}
+*/
+
+/* 7.0 Index entries
+--------------------------------------------------------------*/
+.site-main {
+	max-width: 850px;
+	margin: 0 auto;
+}
+
+.blog-index {
+    //text-align: center;
+    list-style-type: none;
+}
+
+.blog-index-entry {
+    padding: 10px;
+}
+
+.blog-index-title {
+    color: #404040;
+    font-size: 1.3em;
+    display:inline-block;
+    padding: 10px 0;
+}
+.blog-index-title:hover {
+    color: #F03838;
+}
+.blog-index-date {
+    font-size: 0.9em;
+    color: #999;
+}
+
+/* 8.0 Posts
+--------------------------------------------------------------*/
+/*
+.post,
+article.page {
+	padding-right: 10px;
+	padding-left: 10px;
+
+}
+*/
+/*
+.post .entry-header,
+body.page .entry-header {
+	//display: none;
+}
+*/
+/*
+body.search-results .entry-header {
+	display: block;
+}*/
+/*
+body.page .site-main {
+
+}
+*/
+
+.entry-header {
+    //font-size: 2em;
+    text-align: center;
+    border-bottom: solid 3px #404040;
+    margin-bottom: 20px;
+}
+
+
+.entry-content {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 50px;
+}
+
+.entry-content p {
+    padding-top: 25px;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 25px;
+
+}
+.entry-content ul, .entry-content ol {
+    list-style-type: square;
+    //font-size: 1.2em;
+    //line-height: 1.6;
+
+}
+.entry-content li {
+    // line-height: 1.6;
+}
+/*
+.entry-title {
+    //font-size: 2em;
+    //color: #999;
+}
+*/
+.entry-title a {
+    color: #404040;
+}
+.entry-title a:hover {
+    color: #F03838;
+}
+
+.entry-meta {
+    padding-bottom: 20px;
+}
+.entry-date {
+    font-size: 0.988em;
+    color: #999;
+}
+.entry-desc {
+    font-size: 1.111em;
+    color: #999;
+    padding-bottom: 20px;
+}
+
+.entry-footer {
+    padding: 40px 5px;
+}
+.post-navigation {
+    padding-top: 30px;
+}
+
+.page-nav {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+.comments {
+    padding: 2em 1em 3em;
+    background: #ddd;
+    border: solid 1px #ccc;
+}
+.comments div {
+    max-width: 850px;
+    margin: 0 auto;
+}
+.comments h2 {
+    line-height: 20px;
+}
+
+
+/*
+.post-navigation {
+    text-align: center;
+    padding: 2em;
+    font-size: 1.2em;
+}
+
+.nav-next, .nav-previous {
+    padding: 0 20px;
+    display: inline;
+}
+
+section.not-found {
+    padding-bottom: 50px;
+}
+*/
+
+.in-red {
+    //display: inline;
+    //margin: 0;
+    color: #AD0000;
+}
+
+.entry-content img {
+    padding: 20px 0px 20px 0px;
+}
+/* .aligncenter, img.aligncenter { clear: both; display: block; margin-left: auto; margin-right: auto; } */
+
+
+/* 9.0 Footer
+--------------------------------------------------------------*/
+.site {
+    min-height:100%;
+    position:relative;
+    direction: rtl;
+    text-align: right;
+}
+.site-content {
+    padding-bottom:120px;
+}
+.site-footer {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width:100%;
+    height: 120px;
+    //padding: 50px;
+    background-color: #404040;
+    text-align: center;
+}
+.site-footer a {
+    //display: block;
+    //padding-top: 40px;
+    color: #888;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.site-info {
+    //border: 1px solid white;
+    padding-top: 25px;
+}
+
+
+/* 10.0 Pagination.
+--------------------------------------------------------------*/
+.pagination {
+
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.pagination li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+/*
+.page-nav li {
+	display: inline;
+	font-size: 1.1em;
+
+}
+.page-nav a {
+	color: #fefefe;
+	background-color: #404040;
+	cursor: pointer;
+	padding: 0.6em 1em;
+}
+.page-nav .current {
+	color: #fefefe;
+	background-color: #F03838;
+	padding: 0.6em 1em;
+}
+*/
+
+/* 11.0 Archive page
+--------------------------------------------------------------*/
+/*
+.archive-page {
+	text-align: center;
+}
+.archive-page ul {
+	padding: 0;
+	list-style-type: none;
+}
+.archive-archives, .archive-cat {
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+}
+*/
+
+/* 12.0 Home page
+--------------------------------------------------------------*/
+/*
+.home-site {
+  width: 100%;
+  height: 100%;
+  display: table;
+  text-align: center;
+}
+.home-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.home-info {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.home-name {
+  font-size: 4.5em;
+  margin:0;
+}
+.home-desc {
+    padding: 20px 0 40px 0;
+}
+.home-links {
+  padding: 10px 0 10px 0;
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+}
+.home-links a {
+  font-size: 1.3em;
+  padding: 10px 0;
+  display: block;
+  width: 200px;
+  color: #fefefe;
+}
+.home-blog {
+  background: #F03838;
+}
+.home-contact {
+ background: #404040;
+}
+*/
+
+
+
+/* 13.0 Media queries
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+p { font-size: 1.2em; }
+h1 { font-size: 2.0em;}
+h2 { font-size: 1.8em;}
+h3 { font-size: 1.6em;}
+.page-title-big{
+  font-size: 2em;
+}
+.entry-content ul, .entry-content ol {
+	font-size: 1.2em;
+}
+.menu-btn {
+	border-left: 1px solid white;
+}
+.main-navigation {
+	background: #404040;
+}
+
+.index-entry-date {
+	width: 100%;
+	text-align: right;
+	color: #999;
+}
+.index-entry-detail {
+	width: 100%;
+}
+.entry-content img {
+	max-width: 95%;
+	height: auto;
+}
+
+/*
+.archive-archives, .archive-cat {
+	display: block;
+	width: 100%;
+}
+
+.home-name {
+  font-size: 3.5em;
+}
+.home-desc {
+  font-size: 1.1em;
+}
+.home-links {
+  display:block;
+  width: 100%;
+}
+.home-links a {
+  display: inline-block;
+  font-size: 1.2em;
+}
+*/
+
+}
