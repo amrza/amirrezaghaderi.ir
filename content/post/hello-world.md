@@ -4,7 +4,8 @@ date  = "2014-12-21"
 jdate = "۱۳۹۳/۰۹/۳۰"
 draft = false
 
-postdesc = "Hello World! my first post on this blog."
+postdesc = "اولین پست. آغاز."
+postkeywords = ""
 topic = ["دیگر"]
 
 +++
