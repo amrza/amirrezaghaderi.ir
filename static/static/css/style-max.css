@@ -175,13 +175,16 @@ a {
 pre, code {
     margin: 20px 0;
     font-family: "Courier 10 Pitch", Courier, monospace;
-    font-size: 0.988em;
+    font-size: 0.9em;
     line-height: 1.5;
     //background: #eee;
 }
 pre {
-    border: solid 1px #ccc;
-    padding: 20px 10px;
+    border: solid 1px #ddd;
+    background: #F7F7F7;
+    padding: 20px 5px;
+    direction: ltr;
+    text-align: left;
 }
 ul, ol {
     list-style-type: square;
@@ -411,8 +414,8 @@ body.page .site-main {
 .entry-content h5,
 .entry-content h6 {
     margin: 0;
-    padding-top: 30px;
-    padding-bottom: 25px;
+    padding-top: 50px;
+    //padding-bottom: 25px;
 
 }
 .entry-content ul, .entry-content ol {
@@ -696,3 +699,8 @@ h3 { font-size: 1.6em;}
 */
 
 }
+
+
+
+.down { display: none; }
+.vote-down { display: none; }
