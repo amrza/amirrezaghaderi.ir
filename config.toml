@@ -1,7 +1,7 @@
 baseurl = "http://amirrezaghaderi.ir/"
 languageCode = "fa-IR"
 title = "امیررضا قادری"
-Paginate = 10
+Paginate = 30
 disqusShortname = "amirrezaghaderi-ir"
 
 [indexes]
