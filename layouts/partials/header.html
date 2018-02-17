@@ -2,7 +2,7 @@
 <html lang="{{.Site.LanguageCode}}">
 <head>
 <meta charset="utf-8">
-<title>{{.Title}} | وب نوشت‌ها</title>
+<title>{{.Title}} | وب نوشت‌ها | امیررضا قادری</title>
 {{ if .Params.postdesc }}
 <meta name="description" content="{{.Params.postdesc}}"/>
 {{ else }}
@@ -38,7 +38,8 @@ if("querySelector"in document&&"addEventListener"in window&&"classList"in docume
  <a id="menu-btn" class='menu-btn' href="#menu">منوی سایت</a>
  <div id="side-menu" class="menu">
   <ul>
-   <li class="first-item current_page_item"><a href="{{.Site.BaseURL}}">فهرست مطالب</a></li>
+   <li class="first-item current_page_item"><a href="{{.Site.BaseURL}}">صفحه نخست</a></li>
+   <li class="first-item current_page_item"><a href="{{.Site.BaseURL}}post/">فهرست مطالب</a></li>
    <li class="page_item page-item-2"><a href="{{.Site.BaseURL}}topic/">دسته‌بندی بر اساس موضوعات...</a></li>
    <li class="page_item page-item-2"><a href="{{.Site.BaseURL}}contact/">تماس</a></li>
    <li class="page_item page-item-2"><a href="{{.Site.BaseURL}}index.xml">فید</a></li>

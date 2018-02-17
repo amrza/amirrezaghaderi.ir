@@ -1,16 +1,97 @@
-{{ partial "header.html" . }}
 
-<div class="entry-header">
- <h1 class="entry-title"><a rel="bookmark" href="{{.Site.BaseURL}}">امیررضا قادری</a></h1>
- <p class="entry-desc">فهرست وب نوشت‌ها</p>
-</div>
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+	<meta name="generator" content="Hugo 0.17" />
+<meta charset="utf-8">
+<title>امیررضا قادری | توسعه دهنده‌ی نرم افزار</title>
 
-<ul class="blog-index">
-{{ range (where .Paginator.Pages ".Params.singlepage" "!=" "true") }}
-{{ .Render "li" }}
-{{ end }}
-</ul>
+<meta name="description" content="وبلاگ شخصی امیررضا قادری، توسعه دهنده‌ی نرم افزار و سرویس های مبتنی بر وب"/>
 
-{{ template "_internal/pagination.html" . }}
 
-{{ partial "footer.html" . }}
+<meta name="keywords"    content="برنامه نویسی, برنامه‌نویسی, کد, همروند, وب, ارلنگ, الیکسیر, فانکشنال, پایتون, گولنگ, لینوکس, یونیکس, موازی, شبکه">
+
+<meta name="viewport"    content="width=device-width, initial-scale=1">
+<meta name="author"      content="Amirreza Ghaderi">
+<meta name="robots"      content="INDEX,FOLLOW">
+
+<link rel="stylesheet"    href="{{.Site.BaseURL}}static/css/style-min.css" type="text/css"/>
+<link rel="alternate"     href="http://amirrezaghaderi.ir/index.xml" type="application/rss+xml" title="Amirreza's blog"/>
+
+<script type="text/javascript">
+if("querySelector"in document&&"addEventListener"in window&&"classList"in document.documentElement){}else{window.location="http://amirrezaghaderi.ir/old-browser.html"}
+</script>
+<style>
+.page {
+  height: 100%;
+  position: relative;
+}
+.content {
+  width: 400px;
+  position: relative;
+}
+.rtl { direction: rtl; }
+.t-center {text-align: center}
+.t-right {text-align: right}
+.t-left {text-align: left}
+.b {
+  font-family: 'Sahel-Bold';
+  font-weight: bold;
+}
+.w400 { width: 400px; }
+.w70p { width: 70%; }
+.middle { position: relative; top: 40%; transform: perspective(1px) translateY(-40%); }
+.center { margin: 0 auto; }
+.f09em { font-size: 0.9em; }
+.f-h1 {
+  font-size: 3em;
+  font-family: 'Sahel-Bold';
+  font-weight: bold;
+  margin: 0;
+}
+.p20 { padding: 20px; }
+.p10 { padding: 10px; }
+.btn-link {
+  display:inline-block;
+  width:100%;
+  height:100%;
+}
+.m-t-10 {margin-top: 10px;}
+.m-t-20 {margin-top: 20px;}
+
+@media (max-width: 768px) {
+  p {font-size: 1.1em;}
+  .w100p { width: 100%; }
+  .f-h1 { font-size: 2.7em; }
+}
+</style>
+</head>
+
+<body>
+<div class="page rtl">
+
+<div class="content center middle t-center w100p">
+  <h1 class="f-h1" >
+  امـیـــــررضــا قــــادری
+  </h1>
+
+  <p class="p20" style="border-bottom: solid 1px #ABDFF5;">
+  طـــراح و تــوسـعـه دهـــنده‌ی نـــرم افـزار 
+  </p>
+
+  <div class="center w70p f09em m-t-20" style="background-color:#FFFAEB; border: solid 1px #FFE0D6;">
+    <a class="btn-link p10" href="{{.Site.BaseURL}}contact/">
+    تماس
+    </a>
+  </div>
+
+  <div class="center w70p f09em m-t-10" style="background-color:#FFFAEB; border: solid 1px #FFE0D6;">
+    <a class="btn-link p10" href="{{.Site.BaseURL}}post/">
+    نوشته‌ها و مقالات من
+    </a>
+  </div>
+</div><!-- content -->
+
+</div><!-- page -->
+</body>
+</html>
