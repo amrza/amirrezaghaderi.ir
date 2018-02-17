@@ -404,7 +404,7 @@ body.page .site-main {
 }
 
 .entry-content p {
-    padding-top: 25px;
+    padding-top: 20px;
 }
 
 .entry-content h1,
@@ -425,6 +425,7 @@ body.page .site-main {
 
 }
 .entry-content li {
+    margin-bottom: 15px;
     // line-height: 1.6;
 }
 /*
