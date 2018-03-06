@@ -1,11 +1,13 @@
 {{ partial "header.html" . }}
 
-<div class="entry-header">
- <h1 class="entry-title"><a rel="bookmark" href="{{.Site.BaseURL}}">امیررضا قادری</a></h1>
- <p class="entry-desc">فهرست وب نوشت‌ها</p>
+<div class="center bb-bold-black">
+  <h1 class="f1 pt15">
+    <a class="black" rel="bookmark" href="{{.Site.BaseURL}}">امیررضا قادری</a>
+  </h1>
+  <p class="f5 gray2 pb10">فهرست وب نوشت‌ها</p>
 </div>
 
-<ul class="blog-index">
+<ul class="nobullet">
 {{ range (where .Paginator.Pages ".Params.singlepage" "!=" "true") }}
 {{ .Render "li" }}
 {{ end }}

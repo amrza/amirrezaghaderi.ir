@@ -1,20 +1,20 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
 
-<div class="page-btns-wrapper">
-    <p class="page-btn-return"><a href="{{.Site.BaseURL}}post/">بازگشت</a></p>
+<div class="center">
+    <p class=""><a class="f5 bg-red white p5" href="{{.Site.BaseURL}}post/">بازگشت</a></p>
 </div>
 
 {{ "<!----------------------------------------------------------------------- -->" | safeHTML }}
 
 <article id="post" role="article">
-<header class="entry-header">
- <h1 class="entry-title">
-  <a rel="bookmark" href="{{.Permalink}}">{{.Title}}</a>
+<header class="center bb-bold-black">
+ <h1 class="f1 mt30 mb30">
+  <a class="black fh-red" rel="bookmark" href="{{.Permalink}}">{{.Title}}</a>
  </h1>
 {{ if ne .Params.singlepage "true" }}
- <div class="entry-meta">
-  <time class="entry-date published" datetime="{{ .Date.Format "January 2, 2006" }}">{{ .Params.jdate }}</time>
+ <div class="pb10 f5 gray2">
+  <time class="" datetime="{{ .Date.Format "January 2, 2006" }}">{{ .Params.jdate }}</time>
  </div>
 {{ end }}
 </header><!-- .entry-header -->
@@ -25,11 +25,11 @@
 {{ end }}
 </div>
 
-<div class="entry-content">
+<div class="entry-content p10">
 {{ .Content }}
 </div><!-- .entry-content -->
 
-<footer class="entry-footer">
+<footer class="p5 pt40 pb40">
  {{ if ne .Params.singlepage "true" }}
  <div class="cat-links">
   <p><strong>دسته‌بندی:</strong>
