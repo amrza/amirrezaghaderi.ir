@@ -4,5 +4,8 @@ title = "امیررضا قادری"
 Paginate = 30
 disqusShortname = "amirrezaghaderi-ir"
 
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+
 [indexes]
 tag = "topic"
