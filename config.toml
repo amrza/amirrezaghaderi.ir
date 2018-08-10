@@ -1,7 +1,8 @@
-baseurl = "https://amirrezaghaderi.ir/"
+baseurl = "https://amirrezaghaderi.com/fa/"
 languageCode = "fa-IR"
 title = "امیررضا قادری"
 Paginate = 30
+publishdir = "../amirrezaghaderi.com/fa"
 disqusShortname = "amirrezaghaderi-ir"
 
 pygmentsUseClasses = true
